@@ -1,0 +1,214 @@
+/* Container and Layout */
+.ship-details-container {
+  min-height: 100vh;
+  background-color: #f1f5f9; /* slate-100 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b; /* gray-800 */
+  padding: 2rem 1rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Back link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: #2563eb; /* blue-600 */
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s ease-in-out;
+}
+.back-link:hover {
+  color: #1d4ed8; /* blue-800 */
+}
+.back-link svg {
+  margin-right: 0.5rem;
+}
+
+/* Loading spinner */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+}
+.spinner > div {
+  border: 4px solid transparent;
+  border-top-color: #2563eb; /* blue-600 */
+  border-bottom-color: #2563eb;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message */
+.error-message {
+  background-color: #fee2e2; /* red-100 */
+  border: 1px solid #fca5a5; /* red-400 */
+  color: #b91c1c; /* red-700 */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Card */
+.ship-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+              0 4px 6px -2px rgb(0 0 0 / 0.05);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+/* Card header */
+.ship-card-header {
+  background-color: #1e40af; /* blue-700 */
+  padding: 1.5rem 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ship-card-header-left {
+  display: flex;
+  align-items: center;
+}
+.ship-card-header-left svg {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+.ship-card-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+.ship-card-header-right {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.ship-card-header-right svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+/* Card body */
+.ship-card-body {
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Section headings */
+.section-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  color: #1e293b; /* gray-800 */
+}
+.section-heading svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #2563eb; /* blue-600 */
+  margin-right: 0.5rem;
+}
+
+/* Table styles */
+.ship-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.ship-table td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: middle;
+}
+.ship-table tr:not(:last-child) {
+  border-bottom: 1px solid #e2e8f0; /* gray-300 */
+}
+.ship-table td:first-child {
+  color: #64748b; /* gray-600 */
+  width: 50%;
+}
+.ship-table td:last-child {
+  font-weight: 600;
+  color: #0f172a; /* gray-900 */
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+.status-active {
+  background-color: #dcfce7; /* green-100 */
+  color: #166534; /* green-800 */
+}
+.status-inactive {
+  background-color: #f3f4f6; /* gray-100 */
+  color: #475569; /* gray-800 */
+}
+
+/* Ownership & Insurance section */
+.ownership-insurance {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .ownership-insurance {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.ownership-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+              0 4px 6px -2px rgb(0 0 0 / 0.05);
+  padding: 1.5rem 2rem;
+}
+.ownership-card h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+.insurers-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  color: #0f172a;
+}
+.insurers-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .ship-card-body {
+    grid-template-columns: 1fr;
+  }
+}

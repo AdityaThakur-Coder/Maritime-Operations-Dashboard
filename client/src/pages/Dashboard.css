@@ -1,0 +1,188 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Container */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* Header */
+/* .dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937; /* dark gray */
+  /* margin-bottom: 0.25rem;
+}
+
+.dashboard-header p {
+  font-size: 1rem;
+  color: #4b5563; /* medium gray */
+  /* margin-top: 0;
+  margin-bottom: 32px;
+} */ */ */
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* Marine Data Card */
+.marine-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+  padding: 24px 28px;
+  border-top: 6px solid #2563eb; /* default blue border */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.marine-card:hover {
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+/* Different border colors for different cards */
+.marine-card.total-vessels {
+  border-color: #2563eb; /* blue */
+}
+
+.marine-card.active-vessels {
+  border-color: #22c55e; /* green */
+}
+
+.marine-card.ports-activity {
+  border-color: #7c3aed; /* purple */
+}
+
+.marine-card.alerts {
+  border-color: #ef4444; /* red */
+}
+
+/* Card icon */
+.marine-card .icon {
+  width: 36px;
+  height: 36px;
+  color: inherit;
+  margin-bottom: 14px;
+}
+
+/* Card text */
+.marine-card .title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.marine-card .value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+.marine-card .description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.3;
+}
+
+/* Search Form wrapper */
+.ship-search-wrapper {
+  margin-bottom: 48px;
+}
+
+/* Main grid for Chart and Recent Ships */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media(min-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Card containers for chart and recent ships */
+.chart-card, .recent-ships-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+  padding: 24px;
+}
+
+/* Recent Ships header */
+.recent-ships-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.recent-ships-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.recent-ships-header svg {
+  color: #2563eb;
+  width: 22px;
+  height: 22px;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.ship-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.ship-table thead th {
+  text-align: left;
+  padding: 12px 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #6b7280;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.ship-table tbody tr:hover {
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+.ship-table tbody td {
+  padding: 12px 16px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.ship-table tbody td a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ship-table tbody td a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
