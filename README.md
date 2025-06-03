@@ -9,32 +9,6 @@ A full-stack web application built for monitoring and interacting with maritime 
 
 ---
 
-## 📁 Project Structure
-
-```
-maritime-dashboard/
-├── backend/                # Express.js backend
-│   ├── routes/
-│   │   ├── auth.js         # Signup and login routes
-│   │   └── marine.js       # Marine ship data search
-│   ├── models/
-│   │   └── User.js         # Mongoose user model
-│   ├── data/
-│   │   └── marineData.json # Mock ship data
-│   └── server.js           # Main Express server
-├── frontend/               # React dashboard frontend
-│   ├── src/
-│   │   ├── components/
-│   │   │   └── ShipSearch.jsx
-│   │   ├── pages/
-│   │   │   └── Dashboard.jsx
-│   │   └── App.jsx
-├── README.md
-└── .env
-```
-
----
-
 ## ✨ Features
 
 ### 🔒 Backend (Express + MongoDB)
@@ -44,7 +18,7 @@ maritime-dashboard/
 - MongoDB with Mongoose
 - Ship details API using mock JSON data
 
-### 📊 Frontend (React + Tailwind)
+### 📊 Frontend (React )
 - Responsive dashboard layout
 - Welcome message with logged-in user’s name
 - Dummy charts/cards showing marine data
